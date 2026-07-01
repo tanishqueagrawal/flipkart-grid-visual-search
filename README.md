@@ -1,3 +1,12 @@
+---
+title: Flipkart Visual Search
+emoji: 🔍
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+---
+
 # 🔍 Multi-Modal AI Visual Search Engine
 
 > Built for **Flipkart GRiD 8.0** | Track: Software Development / AI
