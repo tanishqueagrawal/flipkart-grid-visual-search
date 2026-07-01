@@ -45,19 +45,18 @@ async def search_by_image(file: UploadFile = File(...), top_k: int = 5):
     query_vector = model.encode(image).tolist()
 
     # Search Qdrant for nearest neighbors
-    results = qdrant_client.search(
-        collection_name=COLLECTION_NAME,
-        query_vector=query_vector,
-        limit=top_k
-    )
+    results = qdrant_client.query_points(
+    collection_name=COLLECTION_NAME,
+    query=query_vector,
+    limit=top_k
+).points
 
-    # Format response
-    response = []
-    for hit in results:
-        response.append({
-            "score": hit.score,
-            "product": hit.payload
-        })
+response = []
+for hit in results:
+    response.append({
+        "score": hit.score,
+        "product": hit.payload
+    })
 
     return {"results": response}
 
