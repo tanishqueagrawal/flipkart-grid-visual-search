@@ -5,7 +5,7 @@ from PIL import Image
 
 st.set_page_config(page_title="Visual Search Engine", page_icon="🔍", layout="wide")
 
-API_URL = "http://127.0.0.1:8000/search"
+API_URL = "https://tanishqueagrawal-flipkart-visual-search.hf.space/search"
 IMAGES_DIR = "dataset_full/images"  # local product images folder
 
 st.title("🔍 Multi-Modal Visual Search Engine")
