@@ -19,12 +19,12 @@ if uploaded_file is not None:
 
     st.subheader("Matching Products")
 
-    with st.spinner("Searching catalog..."):
+    with st.spinner("Searching... (first request may take 30-60 seconds to wake up the server)"):
         files = {"file": (uploaded_file.name, uploaded_file.getvalue(), uploaded_file.type)}
         params = {"top_k": top_k}
 
         try:
-            response = requests.post(API_URL, files=files, params=params, timeout=60)
+            response = requests.post(API_URL, files=files, params=params, timeout=120)
 
             if response.status_code == 200:
                 results = response.json().get("results", [])
