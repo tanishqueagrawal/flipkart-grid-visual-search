@@ -17,6 +17,10 @@ A production-style visual search engine that lets users upload any product photo
 
 ## 🚀 Demo
 
+🌐 **Live App:** [flipkart-grid-visual-search.streamlit.app](https://flipkart-grid-visual-search.streamlit.app)
+
+🔧 **API Docs:** [tanishqueagrawal-flipkart-visual-search.hf.space/docs](https://tanishqueagrawal-flipkart-visual-search.hf.space/docs)
+
 Upload a product image → Get ranked visual matches from 300+ catalog items in real-time.
 
 ---
